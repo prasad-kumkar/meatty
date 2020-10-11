@@ -6,7 +6,7 @@
     $dbhost = "localhost:82";
     $dbname = "meatty";
     $user   = "admin";
-    $pass   = "Ve2VkHq8";
+    $pass   = "qwerty@123";
 
     $auth = new Auth($dbhost, $dbname, $user, $pass);
     $auth->connect();
@@ -15,14 +15,14 @@
     if(isset($_POST["username"]) && !empty($_POST["username"]) &&
         isset($_POST["email"]) && !empty($_POST["username"]) &&
         isset($_POST["password"]) && !empty($_POST["username"]) &&
-        isset($_POST["confPassword"]) && !empty($_POST["username"])){
-
+        isset($_POST["confPassword"]) && !empty($_POST["username"]))
+        {
         $auth->Register($_POST["username"], $_POST["email"], $_POST["password"], $_POST["confPassword"]);
+        }
 
-    }
     else if (isset($_POST["username"]) && !empty($_POST["username"]) &&
-        isset($_POST["password"]) && !empty($_POST["password"])){
-    
+        isset($_POST["password"]) && !empty($_POST["password"]))
+        {
            $auth->Login($_POST["username"], $_POST["password"]);
         }
     
@@ -83,6 +83,47 @@
             $name, $password, $confPassword, $mobile, 
             $pin, $state, $city, $street, $door,
             $validatePass=true){
+
+            // Validate Password: Must contain 1 Uppercase, 1 Lowercase, 1 Number, 1 SpecialChar
+            if($validatePass){
+                $uppercase = preg_match('@[A-Z]@', $password);
+                $lowercase = preg_match('@[a-z]@', $password);
+                $number    = preg_match('@[0-9]@', $password);
+                $specialChars = preg_match('@[^\w]@', $password);
+
+                if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+                    echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+                }
+                else{
+                    echo 'Strong password.';
+                }
+            }
+
+            if ($password != $confPassword){
+                exit("Error: Password and Confirm Password does not match.");
+            }
+
+            $query = "INSERT INTO customer (cus_name, cus_mob, cus_pass, pin, state, city, street, door) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $this->resultObj = $this->connection->prepare($query);
+
+            $this->resultObj->bind_param("sisissss", $name, $mobile, sha1($password), $pin, $state, $city, $street, $door); #encrypted password
+            $this->resultObj->execute();
+
+            if ($this->resultObj->error){
+                echo "Error: ";
+                exit($this->resultObj->error);
+            }
+
+            exit("Registered Successfully!");
+            
+            }
+
+        public function RegisterUser(
+            $name, $password, $confPassword, $mobile, 
+            $pin, $state, $city, $street, $door,
+            $validatePass=true){
+
+            // Validate Password: Must contain 1 Uppercase, 1 Lowercase, 1 Number, 1 SpecialChar
             if($validatePass){
                 $uppercase = preg_match('@[A-Z]@', $password);
                 $lowercase = preg_match('@[a-z]@', $password);
@@ -113,31 +154,7 @@
             }
 
             exit("Registered Successfully!");
-
-
-            // Validate Password: Must contain 1 Uppercase, 1 Lowercase, 1 Number, 1 SpecialChar
-            /*
-
-            $checkQuery = "SELECT username, email FROM users WHERE (username=?) OR (email=?)";
-            $this->resultObj = $this->connection->prepare($checkQuery);
-            $this->resultObj->bind_param("ss", $username, $email); 
-            $this->resultObj->execute();
-            print_r($this->resultObj);
-            $this->resultObj->bind_result($username, $email);
-            $this->resultObj->store_result();
-
-            if ($this->resultObj->error_list >0){
-                exit("Email/username already exists, Please try different Email/username.");
-            }
-            else{
-                $query = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
-                $this->connection->close();
-                $this->connect();
-                $this->resultObj = $this->connection->prepare($query);
-
-                $this->resultObj->bind_param("sss", $username, sha1($password), $email); #encrypted password
-                $this->resultObj->execute();
-                echo("Registered Successfully!");*/
+            
             }
             
         }
