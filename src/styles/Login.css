@@ -1,0 +1,55 @@
+
+.login-page{
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+.login{
+    height: 700px;
+}
+
+.login-logo{
+    height: 80px;
+    margin: 10px;
+}
+
+.sign-in-box{
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.438);
+    display: grid;
+    padding: 20px;
+    width: 300px;
+}
+
+.sign-in-title{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.email-label{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.text-input{
+    height: 25px;
+}
+
+.continue-button{
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    background-color: rgb(157, 27, 31);
+    color: white;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.or-label{
+    display: grid;
+    place-items: center;
+}
