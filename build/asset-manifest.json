@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/meatty/static/css/main.f21f04ed.chunk.css",
+    "main.js": "/meatty/static/js/main.27aa9cf5.chunk.js",
+    "main.js.map": "/meatty/static/js/main.27aa9cf5.chunk.js.map",
+    "runtime-main.js": "/meatty/static/js/runtime-main.5e8a1cfc.js",
+    "runtime-main.js.map": "/meatty/static/js/runtime-main.5e8a1cfc.js.map",
+    "static/js/2.64a48036.chunk.js": "/meatty/static/js/2.64a48036.chunk.js",
+    "static/js/2.64a48036.chunk.js.map": "/meatty/static/js/2.64a48036.chunk.js.map",
+    "index.html": "/meatty/index.html",
+    "precache-manifest.1f7d711f6790defd31658be97dcfbffc.js": "/meatty/precache-manifest.1f7d711f6790defd31658be97dcfbffc.js",
+    "service-worker.js": "/meatty/service-worker.js",
+    "static/css/main.f21f04ed.chunk.css.map": "/meatty/static/css/main.f21f04ed.chunk.css.map",
+    "static/js/2.64a48036.chunk.js.LICENSE.txt": "/meatty/static/js/2.64a48036.chunk.js.LICENSE.txt",
+    "static/media/banner.jpg": "/meatty/static/media/banner.edf1f3e3.jpg",
+    "static/media/beef.jpg": "/meatty/static/media/beef.ecbbf92c.jpg",
+    "static/media/checkout-ad.jpg": "/meatty/static/media/checkout-ad.15ae3f4b.jpg",
+    "static/media/logo.png": "/meatty/static/media/logo.6f7e08f7.png",
+    "static/media/pork.jpg": "/meatty/static/media/pork.bef8b827.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e8a1cfc.js",
+    "static/js/2.64a48036.chunk.js",
+    "static/css/main.f21f04ed.chunk.css",
+    "static/js/main.27aa9cf5.chunk.js"
+  ]
+}
