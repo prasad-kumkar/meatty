@@ -15,7 +15,7 @@ function CheckoutProduct(id, title, price, rating, image) {
                         Array(parseInt(rating))
                             .fill()
                             .map((_) => (
-                                <p>⭐</p>
+                                <span role="img" aria-label="star">⭐</span>
                             )
                             )
                     }

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e41fda431c9a7378e1c0895af740042",
+    "revision": "4c37c6d54e45cf8e7e478c2ad669e6d2",
     "url": "/meatty/index.html"
   },
   {
-    "revision": "86220bcdd8061fa366d9",
+    "revision": "062c20ca4d7ca504fcd1",
     "url": "/meatty/static/css/main.f21f04ed.chunk.css"
   },
   {
-    "revision": "2017dab507791945932a",
-    "url": "/meatty/static/js/2.64a48036.chunk.js"
+    "revision": "7613a5664e9e1a0fc10a",
+    "url": "/meatty/static/js/2.7bf0bd4c.chunk.js"
   },
   {
     "revision": "0dc713a05373e5c9a88cb999f31ae6e4",
-    "url": "/meatty/static/js/2.64a48036.chunk.js.LICENSE.txt"
+    "url": "/meatty/static/js/2.7bf0bd4c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "86220bcdd8061fa366d9",
-    "url": "/meatty/static/js/main.27aa9cf5.chunk.js"
+    "revision": "062c20ca4d7ca504fcd1",
+    "url": "/meatty/static/js/main.fb9b4cdb.chunk.js"
   },
   {
     "revision": "ae653c4f18e58960dce7",
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ecbbf92cb9f31d8f274a606f007bece4",
     "url": "/meatty/static/media/beef.ecbbf92c.jpg"
-  },
-  {
-    "revision": "15ae3f4bbb44a57dc92f12c31e8a2300",
-    "url": "/meatty/static/media/checkout-ad.15ae3f4b.jpg"
   },
   {
     "revision": "6f7e08f726fab3d942ae42462183a5e7",

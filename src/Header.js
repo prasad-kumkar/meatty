@@ -7,7 +7,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket"
 import { useStateValue } from "./StateProvider";
 
 function Header() {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket }] = useStateValue();
     console.log(basket);
     return (
         <nav className="header">
